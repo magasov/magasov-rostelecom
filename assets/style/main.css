@@ -268,3 +268,29 @@ swiper-slide {
     color: #242C39;
     z-index: -1;
 }
+
+.item-card {
+    width: 352px;
+    height: 492px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.item-card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+.item-card h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.item-card p {
+    margin-bottom: 5px;
+}
+.item-card .availability {
+    font-weight: bold;
+}
