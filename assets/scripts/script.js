@@ -14,8 +14,8 @@ async function fetchItems() {
                 <h2>${item.name}</h2>
                 <p>${item.description || ''}</p>
                 <p class="availability">Наличие: ${item.nalic}</p>
-                <p>Артикул: ${item.articul}</p>
-                <p>Цена: ${item.price}</p>
+                <p>${item.articul}</p>
+                <p>${item.price}</p>
             `;
             itemsContainer.appendChild(itemCard);
         });
