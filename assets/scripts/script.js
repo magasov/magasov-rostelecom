@@ -25,7 +25,11 @@ function fetchItems(url, containerId, openModalCallback) {
                 const imageDiv = document.createElement('div');
                 imageDiv.classList.add('image-div');
                 imageDiv.appendChild(image);
-                imageDiv.innerHTML += '<div class="content_absolute-novinka">Новинка</div>';
+
+                const isNew = containerId === 'items-container';
+                const label = isNew ? 'Новинка' : 'Хит';
+                const labelClass = isNew ? 'content_absolute-novinka' : 'content_absolute-hit';
+                imageDiv.innerHTML += `<div class="${labelClass}">${label}</div>`;
 
                 const contentDiv = document.createElement('div');
                 contentDiv.classList.add('content-div');
@@ -63,7 +67,6 @@ function fetchItems(url, containerId, openModalCallback) {
 
                 itemsContainer.appendChild(parentDiv);
 
-                // Добавляем слушатель события на элементы с классом "pokaz"
                 const pokazButton = additionalDiv1.querySelector('.pokaz');
                 pokazButton.addEventListener('click', () => openModalCallback(item));
             });

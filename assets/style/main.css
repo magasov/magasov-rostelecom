@@ -374,6 +374,23 @@ swiper-slide {
     background: #FF5E2D;
     color: #FFFFFF;
     font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 16px;
+    left: 16px;
+}
+
+.content_absolute-hit {
+    width: 39px;
+    height: 24px;
+    background: #16D9A6;
+    color: #242C39;
+    font-size: 14px;
+    font-weight: 500;
     line-height: 20px;
     position: absolute;
     display: flex;
