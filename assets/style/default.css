@@ -10,3 +10,21 @@ body {
 	background: #1D2533;
 	color: #E8E9EA;
 }
+
+/* Chrome и Safari */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #1D2533;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #9466FF;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #7700FF;
+}
