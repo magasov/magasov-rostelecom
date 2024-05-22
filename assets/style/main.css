@@ -277,8 +277,8 @@ swiper-slide {
 }
 
 .parent-div:hover {
-    box-shadow: 0px 12px 20px 0px #00000033;
-    background: #2a323fac;
+    box-shadow: 0px 12px 20px 0px #00000050;
+    background: #2a323fc1;
     transition: all .3s ease;
 }
 
@@ -292,7 +292,7 @@ swiper-slide {
 }
 
 .image-div img {
-    background: radial-gradient(52.53% 52.53% at 50% 47.47%, #4e5d777c 0%, rgba(42, 50, 63, 0) 100%);
+    background: radial-gradient(52.53% 52.53% at 50% 47.47%, #4e5d778a 0%, rgba(42, 50, 63, 0) 100%);
 
 }
 
