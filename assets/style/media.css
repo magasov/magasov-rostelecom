@@ -1,0 +1,135 @@
+@media (max-width: 500px) {
+    header {
+        padding: 0 24px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .media_none {
+        display: none;
+    }
+
+    .navbar__header {
+        width: 94px;
+        position: relative;
+        top: 5px;
+    }
+
+    .media_header {
+        font-size: 30px;
+    }
+
+    .home {
+        padding: 0 24px;
+    }
+
+    .home__text {
+        top: 30px;
+    }
+
+    .home__text h1 {
+        bottom: 80px;
+        font-size: 76.75px;
+    }
+
+    .banner__home {
+        left: 17.5%;
+        top: 300px;
+    }
+    swiper-container {
+        width: 297px;
+        height: 366px;
+    }
+    swiper-slide {
+        width: 297px;
+        height: 366px;
+    }
+    .home__text h1::after {
+        content: '[ с новой коллекцией «Line»]';
+        position: absolute;
+        line-height: 39.62px;
+        font-weight: 400;
+        font-size: 13px;
+        top: 70px;
+        left: 60px;
+    }
+
+    .header__media1 {
+        display: block;
+    }
+
+    .header__media {
+        width: 100%;
+        height: 92px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
+        bottom: 0;
+        background: #1D2533;
+        z-index: 9999;
+        padding: 0 28px;
+    }
+
+    .header__media-block {
+        width: 59px;
+        height: 52px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header__media-block i {
+        font-size: 23px;
+    }
+    .main__categories {
+        padding: 40px 24px;
+    }
+
+    .categ__main {
+        background: red;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .categ__main-block {
+        width: 352px;
+        height: 352px;
+    }
+    .categ__main-opacity {
+        width: 352px;
+        height: 352px;
+    }
+    
+    .categ__two {
+        flex-direction: row ;
+    }
+
+    .categ__main-two {
+        width: 352px;
+        height: 352px;
+    }
+
+    .categ__main-opacity3 {
+        width: 352px;
+        height: 352px;
+    }
+
+    .newProducts {
+      padding: 10px 24px;
+    }
+
+    .newProducts h1::after {
+        content: 'Новинки';
+        font-size: 2px;
+        position: absolute;
+        top: -100px;
+        left: 0;
+        color: #242C39;
+        z-index: -1;
+    }
+}
