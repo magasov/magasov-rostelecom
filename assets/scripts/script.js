@@ -45,25 +45,61 @@ async function fetchItems() {
             additionalDiv1.innerHTML = `
                 <div><img src="../assets/images/tovar/IconLike.svg"></div>
                 <div><img src="../assets/images/tovar/IconIzbranoe.svg"></div>
-                <div><img src="../assets/images/tovar/IconYey.svg"></div>
+                <div class="pokaz"><img src="../assets/images/tovar/IconYey.svg"></div>
             `;
 
-            const button = document.createElement('button'); 
-            button.classList.add('opacity-btn')
-            button.textContent = 'В корзину'; 
+            const button = document.createElement('button');
+            button.classList.add('opacity-btn');
+            button.textContent = 'В корзину';
 
-            additionalDiv.appendChild(button); 
-            additionalDiv.appendChild(additionalDiv1); 
+            additionalDiv.appendChild(button);
+            additionalDiv.appendChild(additionalDiv1);
 
             parentDiv.appendChild(imageDiv);
             parentDiv.appendChild(contentDiv);
             parentDiv.appendChild(additionalDiv);
 
             itemsContainer.appendChild(parentDiv);
+
+            // Добавляем слушатель события на элементы с классом "pokaz"
+            const pokazButton = additionalDiv1.querySelector('.pokaz');
+            pokazButton.addEventListener('click', () => openModal(item));
         });
+
     } catch (error) {
         console.error('Ошибка при получении данных:', error.message);
     }
+}
+
+function openModal(item) {
+    const modal = document.getElementById('modal');
+    const { name, description = '', nalic, articul, price, images = '' } = item;
+
+    document.getElementById('modal-name').textContent = name;
+    document.getElementById('modal-description').textContent = description;
+    document.getElementById('modal-availability').textContent = nalic;
+    document.getElementById('modal-articul').textContent = articul;
+    document.getElementById('modal-price').textContent = `${price} ₽`;
+    document.getElementById('modal-image').src = images;
+
+    modal.style.display = 'block';
+
+    const closeModal = () => {
+        modal.style.display = 'none';
+        closeBtn.removeEventListener('click', closeModal);
+        window.removeEventListener('click', windowClickHandler);
+    };
+
+    const closeBtn = document.querySelector('.modal .close');
+    closeBtn.addEventListener('click', closeModal);
+
+    const windowClickHandler = (event) => {
+        if (event.target === modal) {
+            closeModal();
+        }
+    };
+
+    window.addEventListener('click', windowClickHandler);
 }
 
 window.onload = fetchItems;
