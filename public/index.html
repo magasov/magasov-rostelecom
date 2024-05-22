@@ -30,7 +30,7 @@
             Меню</a>
         <a href="#" class="logo"><img src="../assets/images/home/Rostelecom.svg" alt="logo"></a>
         <nav class="navbar__header">
-            <a href="#" class="media_header">
+            <a href="#" onclick="popupBlock()" class="media_header">
                 <i class='bx bx-search'></i>
             </a>
             <a href="#" class="media_none">
@@ -79,6 +79,17 @@
                 <p>Ещё</p>
             </div>
         </div>
+    </div>
+
+    <!-- header search -->
+    <div class="search-none">
+    <section class="search-block">
+        <div class="search-block_main">
+            <h1>Поиск товаров</h1> <br> <br>
+            <input type="text">
+            <a href="#" onclick="popupNone()"><i class='bx bx-x'></i></a>
+        </div>
+    </section>
     </div>
     <main>
         <section class="home" id="home">
@@ -225,6 +236,7 @@
     
 
     <script src="../assets/scripts/script.js"></script>
+    <script src="../assets/scripts/popupSearch.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 </body>
 </html>
