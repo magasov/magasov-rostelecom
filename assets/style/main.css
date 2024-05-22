@@ -345,8 +345,12 @@ swiper-slide {
     font-weight: 400;
 }
 
-.availability {
+.available {
     color: #26DA72;
+}
+
+.not-available {
+    color: #FF4747;
 }
 
 .product-price {

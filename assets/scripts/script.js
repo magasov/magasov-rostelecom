@@ -33,15 +33,20 @@ function fetchItems(url, containerId, openModalCallback) {
 
                 const contentDiv = document.createElement('div');
                 contentDiv.classList.add('content-div');
+
+                const availabilityClass = item.nalic === "Нет в наличии" ? 'not-available' : 'available';
+
                 contentDiv.innerHTML = `
                     <h2>${item.name}</h2>
                     <p>${item.description || ''}</p>
                     <div class="content-div2">
-                        <li class="availability">${item.nalic}</li>
+                        <li class="availability ${availabilityClass}">${item.nalic}</li>
                         <p>${item.articul}</p>
                     </div>
                     <p class="product-price">${item.price} ₽</p>
                 `;
+
+
 
                 const additionalDiv = document.createElement('div');
                 additionalDiv.classList.add('additional-div');
