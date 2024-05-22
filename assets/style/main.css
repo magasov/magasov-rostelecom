@@ -494,3 +494,41 @@ swiper-slide {
     text-decoration: none;
     cursor: pointer;
 }
+
+
+.categ__main-block-foot {
+    width: 491px;
+    height: 491px;
+}
+
+.categ__main-block-foot:hover {
+    border-radius: 18px 0 0 0;
+}
+
+.foot__one {
+    background: url(../images/home/brand1.png);
+    position: relative;
+    transition: 0.3s ease;
+    background-size: cover;
+}
+
+.foot__two {
+    background: url(../images/home/brand2.png);
+    position: relative;
+    background-size: cover;
+    transition: 0.3s ease;
+}
+
+.categ__main-opacity-foot {
+    border-radius: 18px 0 0 0;
+    width: 491px;
+    height: 491px;
+    background: #3d3d3d73;
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+.categ__main-opacity-foot:hover {
+    opacity: 1;
+    transition: 0.3s ease;
+}
