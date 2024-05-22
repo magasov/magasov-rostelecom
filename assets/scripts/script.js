@@ -40,11 +40,20 @@ async function fetchItems() {
             const additionalDiv = document.createElement('div');
             additionalDiv.classList.add('additional-div');
 
+            const additionalDiv1 = document.createElement('div');
+            additionalDiv1.classList.add('additional-div1');
+            additionalDiv1.innerHTML = `
+                <div><img src="../assets/images/tovar/IconLike.svg"></div>
+                <div><img src="../assets/images/tovar/IconIzbranoe.svg"></div>
+                <div><img src="../assets/images/tovar/IconYey.svg"></div>
+            `;
+
             const button = document.createElement('button'); 
             button.classList.add('opacity-btn')
             button.textContent = 'В корзину'; 
 
             additionalDiv.appendChild(button); 
+            additionalDiv.appendChild(additionalDiv1); 
 
             parentDiv.appendChild(imageDiv);
             parentDiv.appendChild(contentDiv);

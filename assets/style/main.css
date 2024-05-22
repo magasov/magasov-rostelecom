@@ -393,3 +393,17 @@ swiper-slide {
     background: #6124f0;
     transition: all .3s ease;
 }
+
+.additional-div1 {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.additional-div1 div img {
+    cursor: pointer;
+}
