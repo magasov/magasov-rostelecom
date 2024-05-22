@@ -1,74 +1,76 @@
-async function fetchItems() {
-    try {
-        const response = await fetch('http://localhost:3000/items');
-        if (!response.ok) {
-            throw new Error('Ошибка HTTP: ' + response.status);
-        }
-        const items = await response.json();
-        const itemsContainer = document.getElementById('items-container');
+function fetchItems(url, containerId, openModalCallback) {
+    fetch(url)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('HTTP Error: ' + response.status);
+            }
+            return response.json();
+        })
+        .then(items => {
+            const itemsContainer = document.getElementById(containerId);
 
-        if (!itemsContainer) {
-            console.error('Контейнер элементов не найден.');
-            return;
-        }
+            if (!itemsContainer) {
+                console.error('Контейнер элементов не найден.');
+                return;
+            }
 
-        items.forEach(item => {
-            const parentDiv = document.createElement('div');
-            parentDiv.classList.add('parent-div');
+            items.forEach(item => {
+                const parentDiv = document.createElement('div');
+                parentDiv.classList.add('parent-div');
 
-            const image = document.createElement('img');
-            image.src = item.images || '';
-            image.alt = 'Image';
+                const image = document.createElement('img');
+                image.src = item.images || '';
+                image.alt = 'Image';
 
-            const imageDiv = document.createElement('div');
-            imageDiv.classList.add('image-div');
-            imageDiv.appendChild(image);
-            imageDiv.innerHTML += `<div class="content_absolute-novinka">Новинка</div>`;
+                const imageDiv = document.createElement('div');
+                imageDiv.classList.add('image-div');
+                imageDiv.appendChild(image);
+                imageDiv.innerHTML += '<div class="content_absolute-novinka">Новинка</div>';
 
-            const contentDiv = document.createElement('div');
-            contentDiv.classList.add('content-div');
-            contentDiv.innerHTML = `
-                <h2>${item.name}</h2>
-                <p>${item.description || ''}</p>
-                <div class="content-div2">
-                    <li class="availability">${item.nalic}</li>
-                    <p>${item.articul}</p>
-                </div>
-                <p class="product-price">${item.price} ₽</p>
-            `;
+                const contentDiv = document.createElement('div');
+                contentDiv.classList.add('content-div');
+                contentDiv.innerHTML = `
+                    <h2>${item.name}</h2>
+                    <p>${item.description || ''}</p>
+                    <div class="content-div2">
+                        <li class="availability">${item.nalic}</li>
+                        <p>${item.articul}</p>
+                    </div>
+                    <p class="product-price">${item.price} ₽</p>
+                `;
 
-            const additionalDiv = document.createElement('div');
-            additionalDiv.classList.add('additional-div');
+                const additionalDiv = document.createElement('div');
+                additionalDiv.classList.add('additional-div');
 
-            const additionalDiv1 = document.createElement('div');
-            additionalDiv1.classList.add('additional-div1');
-            additionalDiv1.innerHTML = `
-                <div><img src="../assets/images/tovar/IconLike.svg"></div>
-                <div><img src="../assets/images/tovar/IconIzbranoe.svg"></div>
-                <div class="pokaz"><img src="../assets/images/tovar/IconYey.svg"></div>
-            `;
+                const additionalDiv1 = document.createElement('div');
+                additionalDiv1.classList.add('additional-div1');
+                additionalDiv1.innerHTML = `
+                    <div><img src="../assets/images/tovar/IconLike.svg"></div>
+                    <div><img src="../assets/images/tovar/IconIzbranoe.svg"></div>
+                    <div class="pokaz"><img src="../assets/images/tovar/IconYey.svg"></div>
+                `;
 
-            const button = document.createElement('button');
-            button.classList.add('opacity-btn');
-            button.textContent = 'В корзину';
+                const button = document.createElement('button');
+                button.classList.add('opacity-btn');
+                button.textContent = 'В корзину';
 
-            additionalDiv.appendChild(button);
-            additionalDiv.appendChild(additionalDiv1);
+                additionalDiv.appendChild(button);
+                additionalDiv.appendChild(additionalDiv1);
 
-            parentDiv.appendChild(imageDiv);
-            parentDiv.appendChild(contentDiv);
-            parentDiv.appendChild(additionalDiv);
+                parentDiv.appendChild(imageDiv);
+                parentDiv.appendChild(contentDiv);
+                parentDiv.appendChild(additionalDiv);
 
-            itemsContainer.appendChild(parentDiv);
+                itemsContainer.appendChild(parentDiv);
 
-            // Добавляем слушатель события на элементы с классом "pokaz"
-            const pokazButton = additionalDiv1.querySelector('.pokaz');
-            pokazButton.addEventListener('click', () => openModal(item));
+                // Добавляем слушатель события на элементы с классом "pokaz"
+                const pokazButton = additionalDiv1.querySelector('.pokaz');
+                pokazButton.addEventListener('click', () => openModalCallback(item));
+            });
+        })
+        .catch(error => {
+            console.error('Ошибка при получении данных:', error.message);
         });
-
-    } catch (error) {
-        console.error('Ошибка при получении данных:', error.message);
-    }
 }
 
 function openModal(item) {
@@ -98,8 +100,10 @@ function openModal(item) {
             closeModal();
         }
     };
-
     window.addEventListener('click', windowClickHandler);
 }
 
-window.onload = fetchItems;
+window.onload = function () {
+    fetchItems('http://localhost:3000/items', 'items-container', openModal);
+    fetchItems('http://localhost:3000/cartItems', 'hity-container', openModal);
+};
