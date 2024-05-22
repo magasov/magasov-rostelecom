@@ -278,7 +278,7 @@ swiper-slide {
 
 .parent-div:hover {
     box-shadow: 0px 12px 20px 0px #00000033;
-    background: #2A323F;
+    background: #2a323fac;
     transition: all .3s ease;
 }
 
@@ -286,10 +286,14 @@ swiper-slide {
     width: 352px;
     height: 352px;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .image-div img {
-    pointer-events: none;
+    background: radial-gradient(52.53% 52.53% at 50% 47.47%, #4e5d777c 0%, rgba(42, 50, 63, 0) 100%);
+
 }
 
 .content-div {
@@ -348,4 +352,44 @@ swiper-slide {
     justify-content: center;
     top: 16px;
     left: 16px;
+}
+
+.additional-div {
+    width: 352px;
+    height: 492px;
+    opacity: 0;
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    transition: all .3s ease;
+}
+
+.additional-div:hover {
+    opacity: 1;
+    transition: all .3s ease;
+}
+
+.opacity-btn {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    width: 124px;
+    height: 48px;
+    background: #9466FF;
+    border: none;
+    border-radius: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    line-height: 24px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.opacity-btn:hover {
+    background: #6124f0;
+    transition: all .3s ease;
 }

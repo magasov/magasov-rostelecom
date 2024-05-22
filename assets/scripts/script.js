@@ -37,8 +37,18 @@ async function fetchItems() {
                 <p class="product-price">${item.price} ₽</p>
             `;
 
+            const additionalDiv = document.createElement('div');
+            additionalDiv.classList.add('additional-div');
+
+            const button = document.createElement('button'); 
+            button.classList.add('opacity-btn')
+            button.textContent = 'В корзину'; 
+
+            additionalDiv.appendChild(button); 
+
             parentDiv.appendChild(imageDiv);
             parentDiv.appendChild(contentDiv);
+            parentDiv.appendChild(additionalDiv);
 
             itemsContainer.appendChild(parentDiv);
         });
