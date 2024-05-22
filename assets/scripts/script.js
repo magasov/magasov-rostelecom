@@ -6,21 +6,44 @@ async function fetchItems() {
         }
         const items = await response.json();
         const itemsContainer = document.getElementById('items-container');
+
+        if (!itemsContainer) {
+            console.error('Контейнер элементов не найден.');
+            return;
+        }
+
         items.forEach(item => {
-            const itemCard = document.createElement('div');
-            itemCard.classList.add('item-card');
-            itemCard.innerHTML = `
-                <img src="${item.images || ''}" alt="Image">
+            const parentDiv = document.createElement('div');
+            parentDiv.classList.add('parent-div');
+
+            const image = document.createElement('img');
+            image.src = item.images || '';
+            image.alt = 'Image';
+
+            const imageDiv = document.createElement('div');
+            imageDiv.classList.add('image-div');
+            imageDiv.appendChild(image);
+            imageDiv.innerHTML += `<div class="content_absolute-novinka">Новинка</div>`;
+
+            const contentDiv = document.createElement('div');
+            contentDiv.classList.add('content-div');
+            contentDiv.innerHTML = `
                 <h2>${item.name}</h2>
                 <p>${item.description || ''}</p>
-                <p class="availability">Наличие: ${item.nalic}</p>
-                <p>${item.articul}</p>
-                <p>${item.price}</p>
+                <div class="content-div2">
+                    <li class="availability">${item.nalic}</li>
+                    <p>${item.articul}</p>
+                </div>
+                <p class="product-price">${item.price} ₽</p>
             `;
-            itemsContainer.appendChild(itemCard);
+
+            parentDiv.appendChild(imageDiv);
+            parentDiv.appendChild(contentDiv);
+
+            itemsContainer.appendChild(parentDiv);
         });
     } catch (error) {
-        console.error('Ошибка при получении данных:', error);
+        console.error('Ошибка при получении данных:', error.message);
     }
 }
 
