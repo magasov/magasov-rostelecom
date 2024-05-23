@@ -829,7 +829,7 @@ swiper-slide {
 /* signIn */
 
 .signIn {
-    /* display: none; */
+    display: none;
 }
 
 .signIn__main {

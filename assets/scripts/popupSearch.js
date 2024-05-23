@@ -46,3 +46,11 @@ document.addEventListener("DOMContentLoaded", function () {
         return null;
     }
 });
+
+
+// sign
+
+function signIn() {
+    const signIn = document.querySelector('.signIn')
+    signIn.style.display = 'block'
+}
