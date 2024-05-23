@@ -135,3 +135,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
     setInterval(toggleVisibility, 10000); // 10000 мс = 10 секунд
 });
+
+
