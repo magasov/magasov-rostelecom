@@ -116,6 +116,7 @@
         <section class="signIn">
             <div class="signIn__main">
                 <div class="signIn__main-center"> <br> <br>
+                    <a href="#" onclick="signInClose()" class="signClose"><i class='bx bx-x'></i></a>
                     <div class="signIn__main-header">
                         <h1>Вход</h1> 
                         <p>Войти в свой аккаунт</p>
@@ -127,7 +128,7 @@
                         <a href="#" class="zabyl">Забыли пароль</a> <br>
                         <div class="signInUP">
                             <p>Еще нет аккаунта?</p>
-                            <a href="#">Зарегестрироваться!</a>
+                            <a onclick="signInNone()" href="#">Зарегестрироваться!</a>
                         </div>
                     </div>
                     <div class="signIn__main-footer">
@@ -143,8 +144,28 @@
     <!-- signUp -->
         <section class="signUn">
             <div class="signUn__main">
-                <div id="particles-js"></div>
-                <div class="signUn__main-center"></div>
+                <div class="signUn__main-center"> <br> <br>
+                     <a href="#" onclick="signUnClose()" class="signClose"><i class='bx bx-x'></i></a>
+                    <div class="signIn__main-header">
+                        <h1>Регистрация</h1> 
+                        <p>Создать аккаунт</p>
+                    </div>
+                    <div class="signIn__main-main">
+                        <input type="text"><br>
+                        <input type="text"> <br>
+                        <input type="text"> <br><br> <br>
+                        <button>Войти</button> <br> <br> <br>
+                        <div class="signInUP signInUP2">
+                            <p class="signInVoatiYje">Уже есть аккаунт?</p>
+                            <a onclick="signInBlock()" class="signInVoati" href="#">Создать!</a>
+                        </div>
+                    </div>
+                    <div class="signIn__main-footer">
+                        <a href="#"><i class='bx bxl-github bxl-github1'></i></a>
+                        <a href="#"><i class='bx bxl-google bxl-google1' ></i></a>
+                        <a href="#"><i class='bx bxl-youtube bxl-youtube1' ></i></a>
+                        <a href="#"><i class='bx bxl-vk bxl-vk1' ></i></a>
+                    </div></div>
             </div>
         </section>
     <main>

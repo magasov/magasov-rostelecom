@@ -54,3 +54,28 @@ function signIn() {
     const signIn = document.querySelector('.signIn')
     signIn.style.display = 'block'
 }
+
+function signInNone() {
+    const signIn = document.querySelector('.signIn')
+    const signUp = document.querySelector('.signUn')
+    signIn.style.display = 'none'
+    signUp.style.display = 'block'
+}
+
+function signInBlock() {
+    const signIn = document.querySelector('.signIn')
+    const signUp = document.querySelector('.signUn')
+    signIn.style.display = 'block'
+    signUp.style.display = 'none'
+}
+
+// btn close popup
+function signInClose() {
+    const signIn = document.querySelector('.signIn')
+    signIn.style.display = 'none'
+}
+
+function signUnClose() {
+    const signIn = document.querySelector('.signUn')
+    signIn.style.display = 'none'
+}
