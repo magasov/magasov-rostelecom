@@ -471,21 +471,53 @@ swiper-slide {
     overflow: auto;
     background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.4);
+    z-index: 9999;
 }
 
 .modal-content {
-    background-color: #fefefe;
+    background-color: #2A323F;
     margin: 5% auto;
     padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
+    width: 992px;
+    height: 568px;
+    z-index: 9999;
+    display: flex;
+    position: relative;
+}
+
+.modal-content img {
+    width: 480px;
+    height: 480px;
 }
 
 .close {
     color: #aaa;
-    float: right;
+    position: absolute;
+    right: 30px;
+    top: 20px;
     font-size: 28px;
     font-weight: bold;
+}
+
+.modal-details {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    justify-content: space-between;
+}
+
+#modal-price {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.modal-name {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #F1F3F5;
 }
 
 .close:hover,
