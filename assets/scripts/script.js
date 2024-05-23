@@ -116,3 +116,21 @@ window.onload = function () {
     fetchItems('http://localhost:3000/cartItems', 'hity-container', openModal);
 };
 
+// call 
+document.addEventListener('DOMContentLoaded', function () {
+    const callObrat = document.querySelector('.callObrat');
+    let show = true;
+
+    function toggleVisibility() {
+        if (show) {
+            callObrat.classList.add('show');
+        } else {
+            callObrat.classList.remove('show');
+        }
+        show = !show;
+    }
+
+    callObrat.classList.remove('show');
+
+    setInterval(toggleVisibility, 10000); // 10000 мс = 10 секунд
+});
