@@ -829,7 +829,7 @@ swiper-slide {
 /* signIn */
 
 .signIn {
-    display: none;
+    /* display: none; */
 }
 
 .signIn__main {
@@ -842,12 +842,14 @@ swiper-slide {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 16px;
 }
 
 .signIn__main-center {
     width: 592px;
     height: 586px;
-    background: red;
+    background: #141420;
+    border-radius: 10px;
 }
 
 .signUn {
@@ -870,4 +872,81 @@ swiper-slide {
     width: 592px;
     height: 625px;
     background: green;
+}
+
+.signIn__main-header {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.signIn__main-header h1 {
+    color: #00ffaaed;
+    margin: 0 0 8px;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.signIn__main-header p {
+    color: #6c757d;
+    margin: 0 0 16px;
+}
+
+.signIn__main-main {
+    width: 100%;
+    padding: 20px;
+}
+
+.signIn__main-main input {
+    width: 100%;
+    height: 38px;
+    padding: 6px 12px;
+    background: rgba(28, 31, 47, .16);
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid #2e344d;
+    transition: all .3s ease-in-out 0s;
+    box-shadow: 10px 10px 36px rgba(0,0,0,.5), -13px -13px 23px hsla(0,0%,100%,.03);
+    margin-top: 24px;
+    color: #e8e9ea;
+    outline: none;
+}
+
+.signIn__main-main button {
+    background: #1c1f2f;
+    border-radius: 30px;
+    width: 100%;
+    min-height: 38px;
+    overflow: hidden;
+    border: 1px solid #2e344d;
+    transition: all .3s ease-in-out 0s;
+    box-shadow: 0 2px 26px rgba(0,0,0,.5), 0 7px 13px hsla(0,0%,100%,.03);
+    cursor: pointer;
+    color: #e8e9ea;
+    font-size: 16px;
+}
+
+.zabyl {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2b7a19;
+    text-decoration: underline;
+}
+
+.signInUP {
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    font-size: 16px;
+    padding: 0 120px;
+}
+
+.signInUP p {
+    color: #6c757d;
+}
+
+.signInUP a {
+    color: #3468c9;
 }
