@@ -882,14 +882,14 @@ swiper-slide {
 
 .signIn__main-header h1 {
     color: #00ffaaed;
-    margin: 0 0 8px;
     font-weight: 500;
-    font-size: 30px;
+    font-size: 40px;
 }
 
 .signIn__main-header p {
     color: #6c757d;
-    margin: 0 0 16px;
+    margin: 10px 0;
+    font-size: 18px;
 }
 
 .signIn__main-main {
