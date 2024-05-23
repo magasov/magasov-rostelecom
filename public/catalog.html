@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ростелеком | Каталог</title>
+
+    <!-- fonts -->
+    <script src="https://c.webfontfree.com/c.js?f=RostelecomBasis-Regular" type="text/javascript"></script>
+ 
+    <!-- favicion -->
+    <link rel="shortcut icon" href="../assets/images/fav/favicion.png" type="image/x-icon">
+
+    <!-- link css -->
+    <link rel="stylesheet" href="../assets/style/default.css">
+    <link rel="stylesheet" href="../assets/style/main.css">
+    <link rel="stylesheet" href="../assets/style/media.css">
+    <link rel="stylesheet" href="../assets/style/animPopUp.css">
+    <link rel="stylesheet" href="../assets/style/catalog.css">
+
+    <!-- box-icons -->
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!-- animations scrollreveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+</head>
+<body>
+    <header>
+        <a href="#" class="menu">
+            <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M20 0.25H0V1.75H20V0.25ZM0 6.25H20V7.75H0V6.25ZM0 12.25H20V13.75H0V12.25Z" fill="#E8E9EA"/>
+            </svg>
+            Меню</a>
+        <a href="#" class="logo"><img src="../assets/images/home/Rostelecom.svg" alt="logo"></a>
+        <nav class="navbar__header">
+            <a href="#" onclick="popupBlock()" class="media_header">
+                <i class='bx bx-search'></i>
+            </a>
+            <a href="#" class="media_none">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3 8.97831C3 6.24655 5.16494 4 7.87453 4C9.28971 4 10.5168 4.74855 11.3676 5.76904C11.6045 6.0533 11.8168 6.36357 11.9997 6.69262C12.1825 6.36365 12.3946 6.05344 12.6314 5.76922C13.4816 4.74863 14.7083 4 16.1236 4C18.8332 4 20.9981 6.24655 20.9981 8.97831C20.9981 11.4006 19.4893 13.5485 17.7652 15.3159C16.4435 16.6709 14.8908 17.902 13.5947 18.9297C13.1917 19.2493 12.8134 19.5491 12.4747 19.827C12.1981 20.0538 11.8 20.0538 11.5234 19.827C11.1847 19.5491 10.8064 19.2493 10.4034 18.9297C9.10728 17.902 7.55461 16.6709 6.23286 15.3159C4.50876 13.5485 3 11.4006 3 8.97831ZM12.75 9.5H11.25C11.25 8.52096 10.8583 7.50072 10.2154 6.72954C9.5729 5.95883 8.73726 5.5 7.87453 5.5C6.02829 5.5 4.5 7.03961 4.5 8.97831C4.5 10.7843 5.64272 12.5628 7.30662 14.2685C8.5544 15.5477 9.99519 16.6905 11.2792 17.7089C11.5257 17.9044 11.7665 18.0954 11.9991 18.2819C12.2316 18.0954 12.4724 17.9044 12.7189 17.7089C14.0029 16.6905 15.4437 15.5477 16.6915 14.2685C18.3554 12.5628 19.4981 10.7843 19.4981 8.97831C19.4981 7.03961 17.9698 5.5 16.1236 5.5C15.2609 5.5 14.4258 5.95875 13.7838 6.72936C13.1414 7.50047 12.75 8.52075 12.75 9.5Z" fill="#E8E9EA"/>
+                </svg>
+            </a>
+            <a href="#" class="media_none">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 6.25H20V7.75H4V6.25Z" fill="#E8E9EA"/>
+                    <path d="M15 11.25H4V12.75H15V11.25Z" fill="#E8E9EA"/>
+                    <path d="M11 16.25L4 16.25V17.75L11 17.75V16.25Z" fill="#E8E9EA"/>
+                    <path d="M19.7504 20L19.7505 17.75L22.0005 17.7499L22.0005 16.2499L19.7505 16.25L19.7506 14L18.2506 14L18.2505 16.25L16.0005 16.2501L16.0005 17.75L18.2505 17.75L18.2504 20L19.7504 20Z" fill="#E8E9EA"/>
+                </svg>
+            </a>
+            <a href="#" class="media_none">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.35968 6.96333L5.48272 18.89C5.41879 19.7594 6.10692 20.5 6.97868 20.5H17.0211C17.8929 20.5 18.581 19.7594 18.5171 18.89L17.6403 6.96334C17.6211 6.70213 17.4035 6.5 17.1416 6.5H15.9955L15.9956 8.99994L14.4956 9L14.4955 6.5H9.50016L9.50006 9L8.00006 8.99994L8.00016 6.5H6.85833C6.59641 6.5 6.37889 6.70212 6.35968 6.96333ZM8.00023 5H6.85833C5.81066 5 4.94054 5.80849 4.86372 6.85334L3.98676 18.78C3.8589 20.5188 5.23516 22 6.97868 22H17.0211C18.7646 22 20.1409 20.5188 20.0131 18.78L19.1362 6.85336C19.0594 5.8085 18.1893 5 17.1416 5H15.9954L15.9954 4.74988C15.9953 3.23115 14.7641 2 13.2454 2H10.7502C9.2315 2 8.0003 3.23115 8.00024 4.74989L8.00023 5ZM9.50023 5L9.50024 4.74995C9.50027 4.05961 10.0599 3.5 10.7502 3.5H13.2454C13.9357 3.5 14.4954 4.05961 14.4954 4.74995L14.4954 5H9.50023Z" fill="#E8E9EA"/>
+                </svg>
+            </a>
+            <a href="#" onclick="signIn()" class="media_header">
+                <i class='bx bx-user-circle'></i>
+            </a>
+        </nav>
+    </header>
+    <div class="header__media1">
+        <div class="header__media">
+            <div class="header__media-block">
+                <i class='bx bx-home'></i>
+                <p>Главная</p>
+            </div>
+            <div class="header__media-block">
+                <i class='bx bx-food-menu'></i>
+                <p>Каталог</p>
+            </div>
+            <div class="header__media-block">
+                <i class='bx bx-heart' ></i>
+                <p>Избранное</p>
+            </div>
+            <div class="header__media-block">
+                <i class='bx bx-basket'></i>
+                <p>Корзина</p>
+            </div>
+            <div class="header__media-block">
+                <i class='bx bx-dots-horizontal-rounded'></i>
+                <p>Ещё</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- header search -->
+    <div class="search-none">
+    <section class="search-block">
+        <div class="search-block_main">
+            <h1>Поиск товаров</h1> <br> <br>
+            <input type="text">
+            <a href="#" onclick="popupNone()"><i class='bx bx-x'></i></a>
+        </div>
+    </section>
+    </div>
+
+    <!-- куки уведомление -->
+    <div class="cookie-consent" id="cookieConsent">
+        <div>
+            <p>ПАО «Ростелеком» обрабатывает <a href="#">Cookies</a> для корректной работы сайта и персонализации сервисов, в т.ч. с использованием метрических <br> программ и систем аналитик. Вы можете запретить обработку <a href="#">Cookies</a> в настройках браузера.</p>
+            <button id="acceptCookies">Принять</button>
+        </div>    
+    </div>
+
+    <!-- call телефон -->
+    <a href="tel:79999999999" class="callObrat">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+          <div class="dailer">
+            <i class="fa fa-phone"> </i>
+          </div>
+        </a>
+
+    <!-- signIn -->
+        <section class="signIn">
+            <div class="signIn__main">
+                <div class="signIn__main-center"> <br> <br>
+                    <a href="#" onclick="signInClose()" class="signClose"><i class='bx bx-x'></i></a>
+                    <div class="signIn__main-header">
+                        <h1>Вход</h1> 
+                        <p>Войти в свой аккаунт</p>
+                    </div>
+                    <div class="signIn__main-main">
+                        <input type="text"><br>
+                        <input type="text"> <br><br> <br>
+                        <button>Войти</button> <br> <br> <br>
+                        <a href="#" class="zabyl">Забыли пароль</a> <br>
+                        <div class="signInUP">
+                            <p>Еще нет аккаунта?</p>
+                            <a onclick="signInNone()" href="#">Зарегестрироваться!</a>
+                        </div>
+                    </div>
+                    <div class="signIn__main-footer">
+                        <a href="#"><i class='bx bxl-github bxl-github1'></i></a>
+                        <a href="#"><i class='bx bxl-google bxl-google1' ></i></a>
+                        <a href="#"><i class='bx bxl-youtube bxl-youtube1' ></i></a>
+                        <a href="#"><i class='bx bxl-vk bxl-vk1' ></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- signUp -->
+        <section class="signUn">
+            <div class="signUn__main">
+                <div class="signUn__main-center"> <br> <br>
+                     <a href="#" onclick="signUnClose()" class="signClose"><i class='bx bx-x'></i></a>
+                    <div class="signIn__main-header">
+                        <h1>Регистрация</h1> 
+                        <p>Создать аккаунт</p>
+                    </div>
+                    <div class="signIn__main-main">
+                        <input type="text"><br>
+                        <input type="text"> <br>
+                        <input type="text"> <br><br> <br>
+                        <button>Войти</button> <br> <br> <br>
+                        <div class="signInUP signInUP2">
+                            <p class="signInVoatiYje">Уже есть аккаунт?</p>
+                            <a onclick="signInBlock()" href="#">Создать!</a>
+                        </div>
+                    </div>
+                    <div class="signIn__main-footer">
+                        <a href="#"><i class='bx bxl-github bxl-github1'></i></a>
+                        <a href="#"><i class='bx bxl-google bxl-google1' ></i></a>
+                        <a href="#"><i class='bx bxl-youtube bxl-youtube1' ></i></a>
+                        <a href="#"><i class='bx bxl-vk bxl-vk1' ></i></a>
+                    </div></div>
+            </div>
+        </section>
+
+        <main>
+
+           <section class="catalog">
+            <div class="catalog__header">
+            <nav class="navHeader">
+                <a href="index.html">Главная</a>
+                <div>·</div>
+                <p>Каталог</p>
+            </nav>
+
+            </div>
+            <div id="categories"></div>
+           </section>
+
+        </main>
+
+        <footer>
+        <div class="footer__one">
+            <a href="#" class="footer__logo"><img src="../assets/images/home/Rostelecom.svg" alt=""></a>
+
+            <nav class="footer_nav">
+                <a href="#">+7 (499) 999-82-83</a>
+                <a href="#">rostelecom.merc@rt.ru</a>
+            </nav>
+
+            <nav class="footer_nav">
+                <a href="#">vc.ru</a>
+                <a href="#">habr.com</a>
+            </nav>
+
+            <nav class="footer_navbar">
+                <a href="#"><i class='bx bxl-telegram' ></i></a>
+                <a href="#"><i class='bx bxl-vk' ></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+            </nav>
+        </div>
+        <div class="footer__two">
+            <p>© 2023 ПАО «Ростелеком» Все права защищены <br>(18+)</p>
+            <div>
+                <a href="#">Политика обработки данных</a>
+                <a href="#">Политика конфиденциальности</a>
+            </div>
+            <a href="#">Мобильная версия</a>
+        </div>
+    </footer>
+    
+
+    <script src="../assets/scripts/script.js"></script>
+    <script src="../assets/scripts/popupSearch.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+</body>
+</html>

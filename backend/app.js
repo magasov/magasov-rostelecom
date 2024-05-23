@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const Item = require('./models/items');
 const CartItem = require('./models/cartItems');
+const Categories = require('./models/categories');
 
 const app = express();
 
@@ -26,6 +27,16 @@ app.get('/cartItems', async (req, res) => {
   try {
     const cartItems = await CartItem.find().populate('itemId');
     res.json(cartItems);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send(err);
+  }
+});
+
+app.get('/categories', async (req, res) => {
+  try {
+    const categories = await Categories.find().populate('itemId');
+    res.json(categories);
   } catch (err) {
     console.error(err);
     res.status(500).send(err);

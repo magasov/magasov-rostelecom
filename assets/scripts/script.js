@@ -114,6 +114,7 @@ function openModal(item) {
 window.onload = function () {
     fetchItems('http://localhost:3000/items', 'items-container', openModal);
     fetchItems('http://localhost:3000/cartItems', 'hity-container', openModal);
+    fetchItems('http://localhost:3000/categories', 'categories', openModal);
 };
 
 // call 
