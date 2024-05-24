@@ -95,7 +95,8 @@ header {
     line-height: 44px;
 }
 
-.categ__header div {
+.categ__header a {
+    color: #F1F3F5;
     font-size: 16px;
     line-height: 24px;
 }

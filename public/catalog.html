@@ -33,7 +33,7 @@
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M20 0.25H0V1.75H20V0.25ZM0 6.25H20V7.75H0V6.25ZM0 12.25H20V13.75H0V12.25Z" fill="#E8E9EA"/>
             </svg>
             Меню</a>
-        <a href="#" class="logo"><img src="../assets/images/home/Rostelecom.svg" alt="logo"></a>
+        <a href="index.html" class="logo"><img src="../assets/images/home/Rostelecom.svg" alt="logo"></a>
         <nav class="navbar__header">
             <a href="#" onclick="popupBlock()" class="media_header">
                 <i class='bx bx-search'></i>
@@ -182,6 +182,20 @@
 
             </div>
             <div id="categories"></div>
+
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <img id="modal-image" src="" alt="Image" class="modal-image">
+                    <div class="modal-details">
+                        <h2 id="modal-name"></h2>
+                        <p id="modal-description"></p>
+                        <p id="modal-availability"></p>
+                        <p id="modal-articul"></p>
+                        <p id="modal-price"></p>
+                    </div>
+                </div>
+            </div>
            </section>
 
         </main>
